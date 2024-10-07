@@ -1,10 +1,11 @@
 import React from 'react'
-
+import { PiShoppingCartThin } from "react-icons/pi";
+import './Navbar.css'
 function Navbar() {
   return (
     <div className="navigation">
          <div className="logo">
-            <h1>.NovaSHOP</h1>
+            <h1><span><PiShoppingCartThin /></span>.novaSHOP</h1>
         </div>
         <div>
         <ul>

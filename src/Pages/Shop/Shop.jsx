@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import './Shop.css'
 function Shop() {
     
     const[products, setProducts]=useState([]);
-    const[load, setLoad]=useState(true);
+    const[loading, setLoading]=useState(true);
     const[error, setError]=useState(null);
     
     const fetchItems = async () =>{
         try{
-            const items = await fetch('');
-            if(!load.ok){
+            const response = await fetch('https://fakestoreapi.com/products');
+            if(!response.ok){
                 throw new Error("Can't Load page");
             }
-            const products = await items.json();
+            const products = await response.json();
             setProducts(products);
         }
            catch(error){
@@ -20,12 +20,29 @@ function Shop() {
            }
 
            finally{
-            setLoad(false);
+            setLoading(false);
            }
         };
+        useEffect(()=>{
+          fetchItems();
+        },[]);
   return (
-    <div></div>
-  )
+    <div className="product-display">
+            {loading ? (
+                <div>Loading...</div>
+            ) : error ? (
+                <div>Error: {error}</div>
+            ) : (
+                products.map(product => (
+                    <div key={product.id} className="product-card">
+                        <img src={product.image} alt={product.title} />
+                        <h2>{product.title}</h2>
+                        <p>${product.price}</p>
+                    </div>
+                ))
+            )}
+        </div>
+    );
 }
 
 export default Shop
