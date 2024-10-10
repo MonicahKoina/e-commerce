@@ -11,9 +11,9 @@
     width: 200px;
     text-align: center;
     border: 1px solid #9e9494;
-    
-
 }
-.product-card img {
-    max-width: 100%;
+.card-image{
+    width: 100px;
+    height: 70px;
+    
 }
