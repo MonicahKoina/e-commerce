@@ -1,0 +1,12 @@
+.first-card{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    gap: 10em;
+    margin-top: 20px;
+}
+.bag-img img{
+    height: 200px;
+    width: 250px;
+
+}

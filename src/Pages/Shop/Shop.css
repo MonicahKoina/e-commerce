@@ -1,19 +1,14 @@
-.product-display{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 20px;
+.container {
+  display: flex;
+  width: 100%;
 }
-
-.product-card {
-    border-radius: 8px;
-    padding: 16px;
-    width: 200px;
-    text-align: center;
-    border: 1px solid #9e9494;
+.store-data {
+  flex: auto;
+  margin: 10px;
+  padding: 20px;
 }
-.card-image{
-    width: 100px;
-    height: 70px;
-    
+img {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
 }

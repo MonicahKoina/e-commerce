@@ -8,7 +8,7 @@ function App() {
     <>
       <Layout/>
       <Home/>
-      
+      <Shop/>
     </>
   )
 }
