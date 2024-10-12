@@ -1,6 +1,5 @@
 import React from 'react'
 import Bag from './bag.jpg'
-import './Home.css'
 
 function Home() {
   return (

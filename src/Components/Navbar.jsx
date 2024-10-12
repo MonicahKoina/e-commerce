@@ -4,8 +4,6 @@ import { CiSearch } from "react-icons/ci";
 import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
 import { IoMdHelpCircleOutline } from "react-icons/io";
-
-import "./Navbar.css";
 function Navbar() {
   return (
     <div className="navigation">
