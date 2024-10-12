@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./Shop.css";
+
+
 function Shop() {
   const [products, setProducts] = useState([]);
+  
   console.log(products);
   useEffect(() => {
     ourStore();
@@ -21,7 +23,10 @@ function Shop() {
               <div className="content">
                 <h3>{values.title}</h3>
                 <h5>{values.price}$</h5>
-                <p>{values.description}</p>
+                <div>
+                <button className="Buybtn">Buy now</button>
+                </div>
+                
               </div>
             </div>
           </>

@@ -1,14 +1,17 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Layout from './Components/Layout/Layout'
-import Home from './Pages/Home/Home'
-import Shop from './Pages/Shop/Shop'
+import Navbar from './Components/Navbar'
+
 
 function App() {
   return (
     <>
-      <Layout/>
-      <Home/>
-      <Shop/>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      <Route></Route>
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }
