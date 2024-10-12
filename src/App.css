@@ -4,27 +4,49 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 20px;
+    color: rgb(211, 185, 152);
+
 }
 .logo h1{
     font-weight: 200;
+    font-style: italic;
 }
-.nav-search{
-    padding: 20px;
-}
-.nav-search button{
-   padding: 5px;
-   margin: 10px;
-   background-color: rgb(253, 253, 253);
-   border: 1px solid black;
-   border-radius: 20px;
-}
-.navigation-links ul{
-    display: flex;
-    padding: 20px;
-    gap: 1em;
-    list-style: none;
+.navigation-links {
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    margin: 20px;
 }
+.navigation .nav-link{
+    text-decoration: none;
+    color: black;
+
+}
+.nav-link:hover{
+    color: rgb(211, 185, 152);
+    
+}
+.nav-search input{
+    outline:none;
+    border: none;
+}
+.account {
+    padding: 10px;
+    border: none;  
+    border-radius: 30px; 
+    font-size: 18px;
+    margin-left: 70px;
+    
+}
+.icons{
+    display: flex;
+    
+    
+}
+
+
 /*Home*/
 .first-card{
     display: flex;
@@ -40,16 +62,16 @@
 }
 /*Shop*/
 .container {
-    display: flex;
-    width: 100%;
-  }
-  .store-data {
-    flex: auto;
-    margin: 10px;
-    padding: 20px;
-  }
-  img {
-    height: 300px;
-    width: 300px;
-    object-fit: contain;
-  }
+  display: flex;
+  width: 100%;
+}
+.store-data {
+  flex: auto;
+  margin: 10px;
+  padding: 20px;
+}
+img {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}

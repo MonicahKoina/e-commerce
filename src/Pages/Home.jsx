@@ -1,5 +1,6 @@
 import React from 'react'
-import Bag from './bag.jpg'
+import Bag from '../assets/bag.jpg'
+import { Categories } from '../assets/mokeData'
 
 function Home() {
   return (
@@ -15,6 +16,25 @@ function Home() {
         <div className='bag-img'>
             <img src={Bag} alt="djnd"/>
         </div>
+        </div>
+        <div>
+          <div>
+            Shop by categories
+            <ul>
+              {Categories.map((category, index)=>(
+                <li key={index}>
+                <div></div>
+                  {category}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+  
+          </div>
+          <div>
+
+          </div>
         </div>
         </div>
         </>

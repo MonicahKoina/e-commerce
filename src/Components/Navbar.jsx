@@ -1,42 +1,45 @@
 import React from "react";
 import { FaShopify } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
-import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
-import { IoMdHelpCircleOutline } from "react-icons/io";
+import { Link } from "react-router-dom";
+import { CiShop } from "react-icons/ci";
+
 function Navbar() {
   return (
-    <div className="navigation">
-      <div className="logo">
-        <h1>
-          <FaShopify />
-          .novaSHOP
-        </h1>
+    <nav>
+      <div className="navigation">
+        <div className="logo">
+          <Link to="/" className="nav-link">
+            <h1>
+              <FaShopify />
+              .novaSHOP
+            </h1>
+          </Link>
+        </div>
+        <div className="nav-search">
+          <form>
+            <input type="text" placeholder="Search products on nova" />
+            <CiSearch />
+          </form>
+        </div>
+        <div className="navigation-links">
+          <Link to="/Shop" className="nav-link">
+            <div className="icons">
+            <CiShop />Shop
+              </div>
+          </Link>
+          <Link to="/Cart" className="nav-link">
+           <div className="icons">
+           <IoCartOutline />Cart
+            </div> 
+            
+          </Link>
+
+          <button className="account">Login | Register</button>
+        </div>
       </div>
-      <div className="nav-search">
-        <button>
-          <CiSearch />
-          Search products and categories
-        </button>
-        <button>Search</button>
-      </div>
-      <div className="navigation-links">
-        <ul>
-          <li>
-            <VscAccount />
-            Account
-          </li>
-          <li>
-            <IoCartOutline />
-            Cart
-          </li>
-          <li>
-            <IoMdHelpCircleOutline />
-            Help
-          </li>
-        </ul>
-      </div>
-    </div>
+    </nav>
   );
 }
 
