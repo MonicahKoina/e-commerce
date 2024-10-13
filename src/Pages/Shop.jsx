@@ -47,14 +47,13 @@ function Shop() {
         return (
           <>
             <div className="store-data">
-              
-                <img src={values.image} alt="" />
                 <div className="content">
+                <img src={values.image} alt="" />
                   <h3>{values.title}</h3>
                   <h5>Price: {values.price}$</h5>
                   <h6>Category: {values.category}</h6>
-                  <div>
-                    <button className="Buybtn">Add to Cart</button>
+                  <div className="Buybtn">
+                    <button className="cart-btn">Add to Cart</button>
                   </div>
               </div>
             </div>
