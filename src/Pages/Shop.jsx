@@ -16,8 +16,23 @@ function Shop() {
     setProducts(obData);
     setFilterProducts(obData);
   };
+  const handleCategoryChange = (category) => {
+    setCategories(category);
+    if (category) {
+      setFilterProducts(products.filter((product) => product.category === category));
+    } else {
+      setFilterProducts(products);
+    }
+  };
   return (
     <div className="container">
+        <div className="filters">
+        <button onClick={() => handleCategoryChange("")}>All</button>
+        <button onClick={() => handleCategoryChange("electronics")}>Electronics</button>
+        <button onClick={() => handleCategoryChange("jewelery")}>Jewelery</button>
+        <button onClick={() => handleCategoryChange("men's clothing")}>Men's Clothing</button>
+        <button onClick={() => handleCategoryChange("women's clothing")}>Women's Clothing</button>
+      </div>
       {products.map((values) => {
         return (
           <>
