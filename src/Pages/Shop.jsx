@@ -26,14 +26,14 @@ function Shop() {
   };
   return (
     <div className="container">
-        <div className="filters">
+        <div className="filter-btns">
         <button onClick={() => handleCategoryChange("")}>All</button>
         <button onClick={() => handleCategoryChange("electronics")}>Electronics</button>
         <button onClick={() => handleCategoryChange("jewelery")}>Jewelery</button>
         <button onClick={() => handleCategoryChange("men's clothing")}>Men's Clothing</button>
         <button onClick={() => handleCategoryChange("women's clothing")}>Women's Clothing</button>
       </div>
-      {products.map((values) => {
+      {filterProducts.map((values) => {
         return (
           <>
             <div className="store-data">
