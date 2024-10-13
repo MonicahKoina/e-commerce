@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { Cartcontext } from "../Context/Context";
 
 function Shop() {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
-  const [categories, setCategories] = useState("");
 
   console.log(products);
   useEffect(() => {
     ourStore();
   }, []);
+
+  const Globalstate = useContext(Cartcontext);
+  console.log(Globalstate);
+  
   const ourStore = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
     const obData = await response.json();
@@ -16,7 +20,6 @@ function Shop() {
     setFilterProducts(obData);
   };
   const handleCategoryChange = (category) => {
-    setCategories(category);
     if (category) {
       setFilterProducts(
         products.filter((product) => product.category === category)
@@ -46,7 +49,7 @@ function Shop() {
       {filterProducts.map((values) => {
         return (
           <>
-            <div className="store-data">
+            <div key={values}className="store-data">
                 <div className="content">
                 <img src={values.image} alt="" />
                   <h3>{values.title}</h3>
