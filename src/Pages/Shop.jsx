@@ -11,8 +11,9 @@ function Shop() {
   }, []);
 
   const Globalstate = useContext(Cartcontext);
+  const dispatch = Globalstate.dispatch;
   console.log(Globalstate);
-  
+
   const ourStore = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
     const obData = await response.json();
@@ -49,14 +50,14 @@ function Shop() {
       {filterProducts.map((values) => {
         return (
           <>
-            <div key={values}className="store-data">
+            <div key={values.id}className="store-data">
                 <div className="content">
                 <img src={values.image} alt="" />
                   <h3>{values.title}</h3>
                   <h5>Price: {values.price}$</h5>
                   <h6>Category: {values.category}</h6>
                   <div className="Buybtn">
-                    <button className="cart-btn">Add to Cart</button>
+                    <button className="cart-btn" onClick={()=>dispatch({type:"ADD", payload: values})}>Add to Cart</button>
                   </div>
               </div>
             </div>
