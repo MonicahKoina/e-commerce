@@ -48,6 +48,7 @@ function Shop() {
       </div>
       <div className="product">
       {filterProducts.map((values) => {
+        values.quantity = 1;
         return (
           <>
             <div key={values.id}className="store-data">

@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import Shop from './Pages/Shop'
+import Cart from './Pages/Cart'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/Shop' element={<Shop/>}></Route>
+      <Route path='/Cart' element={<Cart/>}></Route>
     </Routes>
     </BrowserRouter>
     </>

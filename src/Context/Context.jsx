@@ -7,7 +7,13 @@ export const Context =(props)=>{
 
         switch(action.type){
             case "ADD":
-                return[...state, action.payload]
+                const tempstate=state.filter((values)=>action.payload.id === values.id)
+                
+                if(tempstate.length > 0){
+                    return state;
+                }else{
+                    return[...state, action.payload]
+                }
             default:
                 return state;
         }
