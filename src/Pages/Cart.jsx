@@ -18,7 +18,6 @@ function Cart() {
             <p>{values.quantity}</p>
             <button>-</button>
           </div>
-          <h2>x</h2>
         </div>
         );
       })}
