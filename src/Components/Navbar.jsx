@@ -19,8 +19,8 @@ function Navbar() {
         </div>
         <div className="nav-search">
           <form>
+          <CiSearch className="search"/>
             <input type="text" placeholder="Search products on nova" />
-            <CiSearch />
           </form>
         </div>
         <div className="navigation-links">

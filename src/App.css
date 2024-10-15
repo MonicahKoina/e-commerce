@@ -1,19 +1,19 @@
-/*Navbar*/
-
+/*navbar*/
 .navigation{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding: 20px;
-    color: rgb(211, 185, 152);
-
 }
+
 .logo h1{
     font-weight: 200;
     font-style: italic;
+    color: rgb(80, 49, 49);
 }
 .navigation-links {
-    font-size: 20px;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
     gap: 0.6em;
@@ -30,34 +30,48 @@
 }
 .nav-search input{
     outline:none;
-    border: none;
+    border: 2px solid black;
+    width: 50vw;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.search{
+    position: absolute;
+    font-size: 20px;
+    padding: 8px;
+    margin-left: 21%;
 }
 .account {
+    margin-left: 0;
+    width: 100%;
     padding: 10px;
     border: none;  
     border-radius: 30px; 
     font-size: 18px;
-    margin-left: 70px;
+    background-color: rgb(122, 92, 53);
+    color: rgb(248, 243, 243);
     
+}
+.account:hover{
+    background-color: rgb(197, 117, 12);;
 }
 .icons{
-    display: flex;
-    
-    
+    display: flex;  
 }
-
-
 /*Home*/
 .first-card{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 30px;
     gap: 10em;
     margin-top: 20px;
+   
 }
 .bag-img img{
     height: 200px;
-    width: 250px;
+    width: 250px;  
 
 }
 /*Shop*/
@@ -69,6 +83,7 @@ img {
 .category-btns{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 20px;
 }
 .category-btns button{
@@ -90,23 +105,70 @@ img {
     margin: 10px;
 }
 .content{
-    
-    padding: 20px;
-    width: 26vw;
-    height: 70vh;
+    margin: 30px;
     border-radius: 30px;
+    padding:  20px;
+    background-color: rgb(255, 249, 238);
+   
     
 }
 .Buybtn {
     display: flex;
-    margin-top: 10px;
+    align-items: center;
     
 }
 .cart-btn{
     border: none;
     padding: 20px;
     border-radius: 10px;
+    background-color: rgb(97, 96, 95);
+    color: aliceblue;
 }
+
 .cart{
     display: inline;
+}
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(248, 238, 225);
+    align-items: center;
+    flex-wrap: wrap;
+}a
+
+.footer ul, li, p{
+    list-style: none; 
+    padding: 5px;
+}
+.footer h2{
+    text-align: center;
+}
+/*brands*/
+.brands{
+    padding: 50px;
+}
+.brands img{
+    height: 100px;
+    width: 200px;
+}
+/*Cart*/
+.cart{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 128px;
+}
+.cart .card{
+    display:flex;
+    justify-content:  space-between;
+}
+/*brands*/
+.brands{
+    text-align: center;
+}
+.brands h1{
+    display: inline-block;
+    margin:20px;
+    font-style: italic;
 }

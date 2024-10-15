@@ -14,9 +14,9 @@ function Cart() {
           <p>{values.title}</p>
           <p>{values.quantity*values.price}</p>
           <div className="quantity">
-            <button>+</button>
+            <button onClick={()=>dispatch({type:"INCREASE", payload:values})}>+</button>
             <p>{values.quantity}</p>
-            <button>-</button>
+            <button onClick={()=>dispatch({type:"DECREASE", payload:values})}>-</button>
           </div>
         </div>
         );

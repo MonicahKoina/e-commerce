@@ -24,9 +24,11 @@ function Footer() {
         <div className="follow">
             <h2>Follow Us</h2>
             <p><FaFacebook />
-            Facebook<br></br>
-            <FaInstagram />Instagram<br></br>
-            <FaXTwitter />Twitter</p>
+            Facebook
+            </p>
+            <p>
+            <FaInstagram />Instagram</p>
+            <p><FaXTwitter />Twitter</p>
         </div>
     </div>
   )

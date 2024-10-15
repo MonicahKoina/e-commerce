@@ -55,7 +55,7 @@ function Shop() {
                 <div className="content">
                 <img src={values.image} alt="" />
                   <h3>{values.title}</h3>
-                  <h5>Price: {values.price}$</h5>
+                  <h5>Price:$ {values.price}</h5>
                   <h6>Category: {values.category}</h6>
                   <div className="Buybtn">
                     <button className="cart-btn" onClick={()=>dispatch({type:"ADD", payload: values})}>Add to Cart</button>
