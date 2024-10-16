@@ -35,8 +35,12 @@ function Navbar() {
             </div> 
             
           </Link>
-
-          <button className="account">Login | Register</button>
+          <Link to="/Login" className="nav-link">
+          <div className="account">
+          Login | Register
+            </div>
+          </Link>
+          
         </div>
       </div>
     </nav>
