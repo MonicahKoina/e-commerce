@@ -6,8 +6,16 @@ export default function Login() {
   const password = useRef();
   
   const handleClick = () =>{
-    console.log(name, email, password);
+    if(name.current.value && email.current.value && password.current.value){
+      localStorage.setItem("name",name.current.value)
+      localStorage.setItem("email",email.current.value)
+      localStorage.setItem("password",password.current.value)
+      localStorage.setItem("signUp",email.current.value)
+      alert("Account created successfully!")
+    }
+    // console.log(name.current.value, email.current.value, password.current.value);
   }
+  
 
   return (
     <div>
