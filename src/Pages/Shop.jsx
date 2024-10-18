@@ -1,5 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Cartcontext } from "../Context/Context";
+import Footer from "./Footer";
+
+
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -52,21 +55,20 @@ function Shop() {
         return (
           <>
             <div key={values.id}className="store-data">
-                <div className="content">
-                <img src={values.image} alt="" />
+                <img src={values.image} alt="" className="store-image"/>
                   <h3>{values.title}</h3>
                   <h5>Price:$ {values.price}</h5>
                   <h6>Category: {values.category}</h6>
                   <div className="Buybtn">
                     <button className="cart-btn" onClick={()=>dispatch({type:"ADD", payload: values})}>Add to Cart</button>
                   </div>
-              </div>
             </div>
           </>
         );
       })}
 
       </div>
+      
     </div>
   );
 }

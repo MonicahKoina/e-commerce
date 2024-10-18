@@ -1,3 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-content{
+    flex: 1;
+}
 /*navbar*/
 .navigation{
     display: flex;
@@ -75,82 +88,48 @@
 
 }
 /*Shop*/
-img {
-  height: 200px;
-  width: 200px;
-  object-fit: contain;
-}
-.category-btns{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-.category-btns button{
-    padding: 8px;
-    margin: 10px;
-    border: none;
-    border-radius: 20px;
-    background-color: black;
-    color: white;
-}
 .product{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 30px;
+    margin: 10px;
     
 }
 .store-data{
+    display: inline-block;
     margin: 10px;
+    width: 40vw;
+    text-align: center;
 }
-.content{
-    margin: 30px;
-    border-radius: 30px;
-    padding:  20px;
-    background-color: rgb(255, 249, 238);
-   
-    
-}
-.Buybtn {
-    display: flex;
-    align-items: center;
-    
-}
-.cart-btn{
-    border: none;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgb(97, 96, 95);
-    color: aliceblue;
-}
+.store-image{
+    height: 200px;
+    margin-top: 6px;
 
+}
 .cart{
     display: inline;
 }
-/*footer*/
-.footer{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(248, 238, 225);
-    align-items: center;
-    flex-wrap: wrap;
-}a
-
-.footer ul, li, p{
-    list-style: none; 
-    padding: 5px;
-}
-.footer h2{
-    text-align: center;
+.cart img{
+    height: 200px;
 }
 /*brands*/
 .brands{
     padding: 50px;
+    text-align: center;
+}
+.brand-images{
+    display: flex;
+    justify-content: space-around;
 }
 .brands img{
-    height: 100px;
+    height: 150px;
     width: 200px;
+
+}
+.brands h1{
+    display: inline-block;
+    margin:20px;
+    font-style: italic;
 }
 /*Cart*/
 .cart{
@@ -163,12 +142,26 @@ img {
     display:flex;
     justify-content:  space-between;
 }
-/*brands*/
-.brands{
-    text-align: center;
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: rgb(196, 120, 21);
+    flex-wrap: wrap;
 }
-.brands h1{
-    display: inline-block;
-    margin:20px;
-    font-style: italic;
+.footer ul{
+    margin: 0;
+    padding: 0;
+}
+.footer ul li{
+    list-style: none;
+    padding: 8px;
+    margin: 0;
+    
+}
+.footer-content{
+    flex: 1;
+    text-align: start;
+    margin-left: 10%;
 }

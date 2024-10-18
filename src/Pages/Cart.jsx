@@ -21,6 +21,7 @@ function Cart() {
         </div>
         );
       })}
+      
     </div>
   )
 }

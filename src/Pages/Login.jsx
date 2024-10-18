@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function Login() {
   const name = useRef();
   const email = useRef();
   const password = useRef();
-  
+
   const handleClick = () =>{
     if(name.current.value && email.current.value && password.current.value){
       localStorage.setItem("name",name.current.value)
@@ -15,8 +15,6 @@ export default function Login() {
     }
     // console.log(name.current.value, email.current.value, password.current.value);
   }
-  
-
   return (
     <div>
       <div className="input-container">
@@ -32,5 +30,7 @@ export default function Login() {
         <button onClick={handleClick}>Sign up</button>
       </div>
     </div>
+    
   );
+  
 }
