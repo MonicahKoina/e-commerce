@@ -9,19 +9,20 @@ function Home() {
   return (
     <>
       <div>
-        <div className="flex justify-evenly flex-wrap bg-yellow-500 w-[80%] mx-[10%] p-10 my-7">
-          <div className= "leading-10 w-1/2 p-8 text-3xl text-white">
-          <h1 classNam>Summer savings</h1>
-          <p>Upto 80% off</p>
-          <button className="flex justify-center w-1/2 bg-orange-600 rounded-full mt-4">SHOP NOW
+        <div className=" flex justify-evenly flex-wrap bg-yellow-500 w-[80%] mx-[10%] p-10 my-7">
+          <div className= "leading-10 w-1/2  text-3xl text-white">
+          <h1 >Summer savings</h1>
+          <p >Upto 80% off</p>
+          <button className=" hidden md:flex justify-center w-1/2 bg-orange-600 rounded-full mt-4">SHOP NOW
             <FaArrowRight className="m-1"/></button>
           </div>
           <div>
-            <img 
+            <img
+            className="w-full"
             src="/happy.jpeg" alt="" />
           </div>
         </div>
-        <div className="mx-[10%] w-[80%] flex justify-between bg-yellow-100 p-10">
+        <div className="mx-[10%] w-[80%] flex flex-1 bg-yellow-100 p-10 flex-wrap">
           <div >
           <CiDeliveryTruck />
           <h4>Free Shipping</h4>

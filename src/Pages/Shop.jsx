@@ -1,8 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Cartcontext } from "../Context/Context";
-import Footer from "./Footer";
-
-
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -34,7 +31,7 @@ function Shop() {
   };
   return (
     <div className="container">
-        <div className="category-btns">
+        <div className="w-">
         <button onClick={() => handleCategoryChange("")}>All</button>
         <button onClick={() => handleCategoryChange("electronics")}>
           Electronics

@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav
       className="w-full  px-3
-      flex items-center justify-between h-20  mx-auto md:w-[95%]  border-b-2 border-b-black "
+      flex items-center justify-between h-20  mx-auto md:w-[95%]  border-b-2 border-b-yellow-200 "
     >
       <Link to="/" className=" flex flex-row-reverse items-end text-sm  ">
         <h1 className="hidden md:inline">.novaSHOP</h1>
