@@ -3,7 +3,7 @@ import { FaShopify } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { FaRegHeart } from "react-icons/fa";
+import { CiShop } from "react-icons/ci";
 
 function Navbar() {
   return (
@@ -21,20 +21,21 @@ function Navbar() {
           className="text-sm md:text-md w-full border-2 border-opacity-90 border-yellow-200 leading-8 rounded-md pl-3  outline-0"
           type="text"
           placeholder="Search products"
+          id="filter"
         />
       </form>
       <img className="w-10 md:hidden" src="/burger.svg" alt="" />
       <div className="hidden md:flex justify-around w-1/3">
         <Link to="/Shop" className="flex items-center gap-1 ">
-          <p className="">Wishlist</p>
-          <FaRegHeart />
+          <p className="">Shop</p>
+          <CiShop />
         </Link>
 
-        <Link to="/Shop" className="flex items-center gap-1 ">
+        <Link to="/" className="flex items-center gap-1 ">
           <p className="">my cart</p>
           <IoCartOutline />
         </Link>
-        <Link to="/Login" className="nav-link">
+        <Link to="/" className="nav-link">
           <div className="account">Login</div>
         </Link>
       </div>

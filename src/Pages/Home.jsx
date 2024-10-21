@@ -22,7 +22,7 @@ function Home() {
             src="/happy.jpeg" alt="" />
           </div>
         </div>
-        <div className="mx-[10%] w-[80%] flex flex-1 bg-yellow-100 p-10 flex-wrap">
+        <div className="mx-[10%] w-[80%] flex justify-evenly bg-yellow-100 p-10 flex-wrap">
           <div >
           <CiDeliveryTruck />
           <h4>Free Shipping</h4>

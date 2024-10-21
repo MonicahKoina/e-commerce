@@ -1,73 +1,23 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Cartcontext } from "../Context/Context";
+import React from 'react'
 
 function Shop() {
-  const [products, setProducts] = useState([]);
-  const [filterProducts, setFilterProducts] = useState([]);
-
-  console.log(products);
-  useEffect(() => {
-    ourStore();
-  }, []);
-
-  const Globalstate = useContext(Cartcontext);
-  const dispatch = Globalstate.dispatch;
-  console.log(Globalstate);
-
-  const ourStore = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const obData = await response.json();
-    setProducts(obData);
-    setFilterProducts(obData);
-  };
-  const handleCategoryChange = (category) => {
-    if (category) {
-      setFilterProducts(
-        products.filter((product) => product.category === category)
-      );
-    } else {
-      setFilterProducts(products);
-    }
-  };
   return (
-    <div className="container">
-        <div className="w-">
-        <button onClick={() => handleCategoryChange("")}>All</button>
-        <button onClick={() => handleCategoryChange("electronics")}>
-          Electronics
-        </button>
-        <button onClick={() => handleCategoryChange("jewelery")}>
-          Jewelery
-        </button>
-        <button onClick={() => handleCategoryChange("men's clothing")}>
-          Men's Clothing
-        </button>
-        <button onClick={() => handleCategoryChange("women's clothing")}>
-          Women's Clothing
-        </button>
-      </div>
-      <div className="product">
-      {filterProducts.map((values) => {
-        values.quantity = 1;
-        return (
-          <>
-            <div key={values.id}className="store-data">
-                <img src={values.image} alt="" className="store-image"/>
-                  <h3>{values.title}</h3>
-                  <h5>Price:$ {values.price}</h5>
-                  <h6>Category: {values.category}</h6>
-                  <div className="Buybtn">
-                    <button className="cart-btn" onClick={()=>dispatch({type:"ADD", payload: values})}>Add to Cart</button>
-                  </div>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-12 gap-16 w-full mx-10'>
+        <div className="bg-slate-200 p-4">
+            <img 
+            className="w-[40%] mx-auto"
+            src="/shoe.jpeg" alt="shoe" />
+            <div className='text-center py-4'>
+                <h1>Product title</h1>
+                <a href="#" className='block'>
+                    <span className='text-sm text-red-700'>Category</span>
+                </a>
+                <span className='block '>$<span text-md>15.88</span></span>
+                <button className='border-2 py-1 px-3 bg-yellow-300'>Add to cart</button>
             </div>
-          </>
-        );
-      })}
-
-      </div>
-      
+        </div>
     </div>
-  );
+  )
 }
 
-export default Shop;
+export default Shop
