@@ -8,11 +8,12 @@ import Shop from './Pages/Shop';
 function App() {
   return <>
   <BrowserRouter>
-  <Layout/>
+  <Layout>
   <Routes>
     <Route path='/' element={<Home/>}></Route>
     <Route path='/Shop' element={<Shop/>} ></Route>
   </Routes>
+  </Layout>
   </BrowserRouter>
   </>;
 }
