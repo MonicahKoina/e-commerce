@@ -31,7 +31,7 @@ function Navbar() {
           <CiShop />
         </Link>
 
-        <Link to="/" className="flex items-center gap-1 ">
+        <Link to="/Cart" className="flex items-center gap-1 ">
           <p className="">my cart</p>
           <IoCartOutline />
         </Link>

@@ -49,6 +49,7 @@ console.log(Globalstate);
            </div>
            }
        {filteredProducts.map(product => {
+        product.quantity = 1;
            return (
                <div key={product.id} className=" flex flex-col p-4 border-2 rounded-md border-yellow-100 mb-10">
                    <img 
@@ -63,7 +64,7 @@ console.log(Globalstate);
                      </div> 
                      <div className=' mx-auto my-8 '>
                        <button 
-                       onClick={()=>dispatch({type:"Add", payload:product})}
+                       onClick={()=>dispatch({type:"ADD", payload:product})}
                        className='rounded-lg py-1 px-3 bg-yellow-500 '>Add to cart</button>
                         </div>
                </div>
