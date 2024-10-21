@@ -20,6 +20,12 @@ function Shop() {
 
   return (
       <div className='grid grid-cols-1 md:grid-cols-3 pt-12 gap-16 w-3/4 mx-auto'>
+        <div>
+            <button>Men</button>
+            <button>Women</button>
+            <button>Jewelery</button>
+            <button>Electronics</button>
+        </div>
        {loading &&
         <div>
            <h1>Loading</h1>
