@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 function Shop() {
     const[loading, setLoading]=useState(false);
     const[data, setData]=useState([]);
+    const [selectedCategory, setSelectedCategory] = useState('all');
 
     useEffect(()=>{
         setLoading(true)
@@ -18,20 +19,33 @@ function Shop() {
         .finally(()=>setLoading(false));
     },[])
 
+    const filteredProducts = selectedCategory === 'all' 
+        ? data 
+        : data.filter(product => product.category === selectedCategory);
+
   return (
-      <div className='grid grid-cols-1 md:grid-cols-3 pt-12 gap-16 w-3/4 mx-auto'>
-        <div>
-            <button>Men</button>
-            <button>Women</button>
-            <button>Jewelery</button>
-            <button>Electronics</button>
+    <div>
+        <div className='flex mx-auto my-8 gap-4 w-[30%] flex-wrap '>
+            <button 
+            onClick={() => setSelectedCategory("men's clothing")}
+            className='bg-yellow-500 p-2 rounded-lg' >Men</button>
+            <button 
+            onClick={() => setSelectedCategory("women's clothing")}
+            className='bg-yellow-500 p-2 rounded-lg'>Women</button>
+            <button 
+             onClick={() => setSelectedCategory('jewelery')}
+            className='bg-yellow-500 p-2 rounded-lg'>Jewelery</button>
+            <button 
+            onClick={() => setSelectedCategory('electronics')}
+            className='bg-yellow-500 p-2 rounded-lg'>Electronics</button>
         </div>
+      <div className='grid grid-cols-1 md:grid-cols-3 pt-12 gap-16 w-3/4 mx-auto'>
        {loading &&
         <div>
            <h1>Loading</h1>
            </div>
            }
-       {data.map(product => {
+       {filteredProducts.map(product => {
            return (
                <div key={product.id} className=" flex flex-col p-4 border-2 rounded-md border-yellow-100 mb-10">
                    <img 
@@ -50,6 +64,7 @@ function Shop() {
                </div>
            );
        })}
+      </div>
       </div>
   );
 }
