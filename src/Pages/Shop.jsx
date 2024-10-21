@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { Cartcontext } from '../context/Context';
 
 function Shop() {
     const[loading, setLoading]=useState(false);
@@ -18,7 +19,9 @@ function Shop() {
         })
         .finally(()=>setLoading(false));
     },[])
-
+const Globalstate = useContext(Cartcontext);
+const dispatch =Globalstate.dispatch;
+console.log(Globalstate);
     const filteredProducts = selectedCategory === 'all' 
         ? data 
         : data.filter(product => product.category === selectedCategory);
@@ -59,7 +62,9 @@ function Shop() {
                        <p className=''>price:$<span text-md>{product.price}</span></p>
                      </div> 
                      <div className=' mx-auto my-8 '>
-                       <button className='rounded-lg py-1 px-3 bg-yellow-500 '>Add to cart</button>
+                       <button 
+                       onClick={()=>dispatch({type:"Add", payload:product})}
+                       className='rounded-lg py-1 px-3 bg-yellow-500 '>Add to cart</button>
                         </div>
                </div>
            );
