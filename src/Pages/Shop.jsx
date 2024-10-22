@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Cartcontext } from '../context/Context';
+import Footer from './Footer';
 
 function Shop() {
     const[loading, setLoading]=useState(false);
@@ -71,6 +72,7 @@ console.log(Globalstate);
            );
        })}
       </div>
+      <Footer/>
       </div>
   );
 }

@@ -35,7 +35,7 @@ function Navbar() {
           <p className="">my cart</p>
           <IoCartOutline />
         </Link>
-        <Link to="/" className="nav-link">
+        <Link to="/Login" className="nav-link">
           <div className="account">Login</div>
         </Link>
       </div>

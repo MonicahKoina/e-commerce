@@ -4,6 +4,7 @@ import { BiDollarCircle } from "react-icons/bi";
 import { AiFillCreditCard } from "react-icons/ai";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -13,7 +14,7 @@ function Home() {
           <div className= "leading-10 w-1/2  text-3xl text-white">
           <h1 >Summer savings</h1>
           <p >Upto 80% off</p>
-          <button className=" hidden md:flex justify-center w-1/2 bg-orange-600 rounded-full mt-4">SHOP NOW
+          <button className=" hidden md:flex justify-center w-3/4 bg-orange-600 rounded-full mt-4">SHOP NOW
             <FaArrowRight className="m-1"/></button>
           </div>
           <div>
@@ -52,6 +53,7 @@ function Home() {
           <img  className="w-1/2" src="/shoe.jpg" alt="" />
         </div>
         </div>
+        <Footer/>
       </div>
     </>
   );
