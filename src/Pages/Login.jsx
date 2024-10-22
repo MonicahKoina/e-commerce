@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Home from './Home'
 
-function loginLocalStorage(){
+function Login(){
   const name = useRef()
   const email = useRef()
   const password= useRef()
@@ -25,20 +25,28 @@ function loginLocalStorage(){
   return(
    <div>
     {showHome?<Home/>:
-   <div>
-      <div>
-        <input type="text"  placeholder='Name' ref={name}/>
+   <div className='border-2 rounded-xl w-1/2 mx-auto my-20 p-4 text-center'>
+      <div >
+        <input
+        className='p-4 w-1/2 outline-none border-b-2 border-grey'
+         type="text"  placeholder='name' ref={name}/>
       </div>
       <div>
-        <input type="text"  placeholder='Name' ref={email}/>
+        <input type="text"
+        className='p-4 w-1/2 outline-none border-b-2 border-grey' 
+        placeholder='email' ref={email}/>
       </div>
       <div>
-        <input type="text"  placeholder='Name' ref={password}/>
+        <input type="text"  
+        className='p-4 w-1/2 outline-none border-b-2 border-grey'
+        placeholder='password' ref={password}/>
       </div>
-      <button onClick={handleClick}>Log In</button>
+      <button 
+      className=' bg-yellow-500  p-4 w-1/5 rounded-2xl mt-10'
+      onClick={handleClick}>Log In</button>
     </div>
 }
     </div>
   )
 }
-export default loginLocalStorage;
+export default Login;
